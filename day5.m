@@ -1,11 +1,11 @@
-% Day 5
+% Day  5
 clearvars
 close all
 clc
 
 M = readlines('input_day5.txt');
 
-f = find(M=='');
+f = find(M == '');
 
 M1 = M(1:f(1)-1);
 M2 = M(f(1)+1:f(2)-1);
@@ -21,10 +21,11 @@ for i = 1:length(M2)
             break
         end
     end
-    for j = 1:length(M1)
-        s = split(M1(j),'-');
-        fresh_ranges(end+1,:) = [str2double(s(1)),str2double(s(2))];
-    end
+end
+
+for i = 1:length(M1)
+    s = split(M1(i),'-');
+    fresh_ranges(end+1,:) = [str2double(s(1)),str2double(s(2))];
 end
 
 sum_ranges = 0;
