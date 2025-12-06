@@ -37,11 +37,9 @@ for i = length(signs):-1:1
     if signs(i) == '*'
         total2 = total2 + prod(list);
         list = [];
-    else
-        if signs(i) == '+'
-            total2 = total2 + sum(list);
-            list = [];
-        end
+    elseif signs(i) == '+'
+        total2 = total2 + sum(list);
+        list = [];
     end
 end
 
